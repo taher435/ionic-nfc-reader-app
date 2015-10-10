@@ -1,0 +1,16 @@
+<ion-view title="Login" ng-controller="LoginController as lc">
+    <ion-content padding="true" class="has-header">
+        <div class="spacer" style="height: 100px;"></div>
+        <form id="frmLogin" name="frmLogin">
+            <label class="item item-input" name="email">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Enter your email" ng-model="lc.email" required="true">
+            </label>
+            <label class="item item-input" name="password">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="Enter your password" ng-model="lc.password" required="true">
+            </label>
+            <button class="button button-positive button-block" ng-disabled="frmLogin.$invalid" type="submit" ng-click="lc.doLogin()">Login</button>
+        </form>
+    </ion-content>
+</ion-view>
