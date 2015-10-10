@@ -2,6 +2,7 @@
 	angular.module('knowyouApp').factory('KyService', ['$http', '$q', KyService]);
 
 	function KyService($http, $q){
+		var clientId = null, clientSecret = null;
 		return{
 			login: function(email, password){
 				var request = {
@@ -15,6 +16,9 @@
 					var result = true;
 					if(result){
 						//All Ok
+						//TODO: Use from server once done
+						clientId = 1;
+						clientSecret = "sa846hghtn8874jgyth";
 						deferred.resolve();
 					}else{
 						deferred.reject();
@@ -22,14 +26,12 @@
 
 					return deferred.promise;
 				});
+			},
 
-				// //DUMMY, until API is ready
-				// var deferred = $q.defer();
-				// if(email == "taher435@gmail.com" && password == "123456"){
-				// 	deferred.resolve();
-				// }else{
-				// 	deferred.reject();
-				// }
+			requestData: function(tag){
+				if(clientId && clientSecret && tag && tag != ""){
+					
+				}
 			}
 		}
 	}

@@ -1,7 +1,8 @@
-<ion-view title="Home" ng-controller="HomeController">
+<ion-view title="Services" ng-controller="HomeController">
     <ion-content padding="true" class="has-header">
-        <div class="spacer" style="width: 300px; height: 190px;"></div>
-        <button class="button button-positive button-block">Start Scan</button>
-        <button class="button button-assertive button-block">Stop Scan</button>
+    	<div class="spacer" style="width: 300px; height: 70px;"></div>
+        <button class="button button-positive button-block" ng-click="state.go('get-data', {type: 1})">Open New Account</button>
+        <button class="button button-positive button-block" ng-click="state.go('get-data', {type: 2})">New Loan</button>
+        <button class="button button-positive button-block" ng-click="state.go('get-data', {type: 3})">New Credit Card</button>
     </ion-content>
 </ion-view>
